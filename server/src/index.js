@@ -17,7 +17,7 @@ const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://auracommerce-one.vercel.app"
+      "https://aurele-green.vercel.app"
     ],
     methods: ["GET", "POST"],
   },
@@ -25,12 +25,14 @@ const io = new Server(server, {
 
 app.use(
   cors({
-     origin: [
+    origin: [
       "http://localhost:5173",
-      "https://auracommerce-one.vercel.app"
-     ],
-     })
-    );
+      "https://aurele-green.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+  })
+);
 app.use(express.json());
 
 // Attach io to req for use in routes

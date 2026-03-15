@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ShoppingBag, Heart } from "lucide-react";
 import { useCart } from "@/contexts/CartContext";
-import { useWishlist } from "@/contexts/WishlistContext";
+import { useWishlist } from "@/contexts/WishlistContext.tsx";
 import { toast } from "sonner";
 import product1 from "@/assets/product-1.jpg";
 import product2 from "@/assets/product-2.jpg";

@@ -15,23 +15,17 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: [
-      "http://localhost:5173",
-      "https://aurele-green.vercel.app"
-    ],
+    origin: ["http://localhost:5173", "https://aurele-green.vercel.app"],
     methods: ["GET", "POST"],
   },
 });
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://aurele-green.vercel.app"
-    ],
+    origin: ["http://localhost:5173", "https://aurele-green.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true
-  })
+    credentials: true,
+  }),
 );
 app.use(express.json());
 
@@ -88,7 +82,14 @@ async function seedProducts() {
         category: "Bags",
         image_url: "/product-1.jpg",
         mood: "bold",
-        specs: { material: "Full-grain leather", dimensions: "38 × 28 × 12 cm", weight: "680g", color: "Noir Black", lining: "Suede interior", closure: "Magnetic snap" },
+        specs: {
+          material: "Full-grain leather",
+          dimensions: "38 × 28 × 12 cm",
+          weight: "680g",
+          color: "Noir Black",
+          lining: "Suede interior",
+          closure: "Magnetic snap",
+        },
       },
       {
         name: "Chronograph Gold",
@@ -96,7 +97,14 @@ async function seedProducts() {
         category: "Watches",
         image_url: "/product-2.jpg",
         mood: "minimal",
-        specs: { movement: "Swiss automatic", water_resistance: "100m", case: "18k gold-plated steel", dimensions: "42mm diameter", warranty: "2 years", weight: "145g" },
+        specs: {
+          movement: "Swiss automatic",
+          water_resistance: "100m",
+          case: "18k gold-plated steel",
+          dimensions: "42mm diameter",
+          warranty: "2 years",
+          weight: "145g",
+        },
       },
       {
         name: "Aviator Shades",
@@ -104,7 +112,14 @@ async function seedProducts() {
         category: "Eyewear",
         image_url: "/product-3.jpg",
         mood: "adventurous",
-        specs: { lens: "Polarized gradient", material: "Titanium frame", color: "Gold / Smoke", dimensions: "145mm width", weight: "28g", warranty: "1 year" },
+        specs: {
+          lens: "Polarized gradient",
+          material: "Titanium frame",
+          color: "Gold / Smoke",
+          dimensions: "145mm width",
+          weight: "28g",
+          warranty: "1 year",
+        },
       },
       {
         name: "Elysian Parfum",
@@ -112,7 +127,13 @@ async function seedProducts() {
         category: "Fragrance",
         image_url: "/product-4.jpg",
         mood: "cozy",
-        specs: { notes_top: "Bergamot, Neroli", notes_heart: "Jasmine, Rose", material: "Eau de Parfum 100ml", color: "Amber flacon", closure: "Crystal stopper" },
+        specs: {
+          notes_top: "Bergamot, Neroli",
+          notes_heart: "Jasmine, Rose",
+          material: "Eau de Parfum 100ml",
+          color: "Amber flacon",
+          closure: "Crystal stopper",
+        },
       },
       {
         name: "Heritage Wallet",
@@ -120,7 +141,14 @@ async function seedProducts() {
         category: "Accessories",
         image_url: "/product-5.jpg",
         mood: "minimal",
-        specs: { material: "Vegetable-tanned leather", color: "Cognac Brown", card_slots: "8 slots", dimensions: "9.5 × 11 cm", weight: "85g", closure: "Bi-fold" },
+        specs: {
+          material: "Vegetable-tanned leather",
+          color: "Cognac Brown",
+          card_slots: "8 slots",
+          dimensions: "9.5 × 11 cm",
+          weight: "85g",
+          closure: "Bi-fold",
+        },
       },
       {
         name: "Silk Ombré Scarf",
@@ -128,7 +156,97 @@ async function seedProducts() {
         category: "Accessories",
         image_url: "/product-6.jpg",
         mood: "cozy",
-        specs: { material: "100% Mulberry silk", dimensions: "90 × 90 cm", weave: "Twill", color: "Champagne to Ivory", weight: "65g", care: "Dry clean only" },
+        specs: {
+          material: "100% Mulberry silk",
+          dimensions: "90 × 90 cm",
+          weave: "Twill",
+          color: "Champagne to Ivory",
+          weight: "65g",
+          care: "Dry clean only",
+        },
+      },
+      {
+        name: "Midnight Chrono Watch",
+        price: 1980,
+        category: "Watches",
+        image_url: "/product-7.jpg",
+        mood: "bold",
+        specs: {
+          movement: "Swiss quartz",
+          case: "Stainless steel",
+          diameter: "41mm",
+          strap: "Black leather",
+          water_resistance: "50m",
+          warranty: "2 years",
+        },
+      },
+      {
+        name: "Velour Leather Backpack",
+        price: 1120,
+        category: "Bags",
+        image_url: "/product-8.jpg",
+        mood: "minimal",
+        specs: {
+          material: "Italian calf leather",
+          dimensions: "40 × 30 × 14 cm",
+          compartments: "3 interior pockets",
+          color: "Deep espresso",
+          weight: "1.1kg",
+        },
+      },
+      {
+        name: "Aurora Sunglasses",
+        price: 420,
+        category: "Eyewear",
+        image_url: "/product-9.jpg",
+        mood: "adventurous",
+        specs: {
+          lens: "Polarized UV400",
+          frame: "Titanium alloy",
+          color: "Matte silver",
+          width: "142mm",
+          weight: "24g",
+        },
+      },
+      {
+        name: "Obsidian Chronograph",
+        price: 2750,
+        category: "Watches",
+        image_url: "/product-10.jpg",
+        mood: "bold",
+        specs: {
+          movement: "Swiss automatic",
+          case: "Black ceramic",
+          diameter: "44mm",
+          strap: "Rubber sport strap",
+          water_resistance: "200m",
+        },
+      },
+      {
+        name: "Signature Silk Tie",
+        price: 160,
+        category: "Accessories",
+        image_url: "/product-11.jpg",
+        mood: "minimal",
+        specs: {
+          material: "100% silk",
+          width: "7cm",
+          pattern: "Subtle geometric",
+          color: "Midnight blue",
+        },
+      },
+      {
+        name: "Imperial Leather Belt",
+        price: 210,
+        category: "Accessories",
+        image_url: "/product-12.jpg",
+        mood: "cozy",
+        specs: {
+          material: "Full grain leather",
+          buckle: "Brushed steel",
+          width: "3.5cm",
+          color: "Dark brown",
+        },
       },
     ]);
     console.log("Products seeded");

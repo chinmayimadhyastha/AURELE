@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { CartProvider } from "@/contexts/CartContext";
-import { WishlistProvider } from "./contexts/WishlistContextTemp.tsx";
+import { WishlistProvider } from "./contexts/WishlistContext.tsx";
 import Index from "./pages/Index.tsx";
 import AuthPage from "./pages/AuthPage.tsx";
 import ForgotPassword from "./pages/ForgotPassword.tsx";

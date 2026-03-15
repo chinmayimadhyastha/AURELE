@@ -23,7 +23,14 @@ const io = new Server(server, {
   },
 });
 
-app.use(cors({ origin: process.env.CLIENT_URL || "http://localhost:5173" }));
+app.use(
+  cors({
+     origin: [
+      "http://localhost:5173",
+      "https://auracommerce-one.vercel.app"
+     ],
+     })
+    );
 app.use(express.json());
 
 // Attach io to req for use in routes

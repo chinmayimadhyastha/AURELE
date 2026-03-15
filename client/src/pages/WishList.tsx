@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, Heart, ShoppingBag, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useWishlist } from "@/contexts/WishlistContext";
+import { useWishlist } from "@/contexts/WishlistContextTemp";
 import { useCart } from "@/contexts/CartContext";
 import { toast } from "sonner";
 import Navbar from "@/components/Navbar";

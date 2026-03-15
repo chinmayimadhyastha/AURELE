@@ -4,7 +4,7 @@ import { ShoppingBag, Search, Menu, X, User, LogOut, Heart } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "@/contexts/AuthContext";
 import { useCart } from "@/contexts/CartContext";
-import { useWishlist } from "@/contexts/WishlistContext";
+import { useWishlist } from "@/contexts/WishlistContextTemp";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
